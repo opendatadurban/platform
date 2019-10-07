@@ -70,6 +70,7 @@
     },
     "config": {
         "bin-dir": "bin/",
+        "process-timeout":0,
         "github-protocols": [
             "https",
             "http",
