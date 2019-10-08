@@ -134,11 +134,7 @@
             "phpspec run --no-code-generation",
             "behat --strict --profile ci"
         ],
-        "post-install-cmd": [
-        "php artisan clear-compiled",
-        "chmod -R 777 storage",
-        "php artisan passport:keys"
-        ],
+        "post-install-cmd": [ "php artisan clear-compiled", "chmod -R 777 storage", "echo -n $OAUTH_PRIVATE_KEY > storage/oauth-private.key", "echo -n $OAUTH_PUBLIC_KEY > storage/oauth-public.key" ],
         "bootstrap:passport": [
             "php artisan passport:keys",
             "chmod 660 storage/passport/*.key"
