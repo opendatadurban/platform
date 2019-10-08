@@ -134,10 +134,6 @@
             "phpspec run --no-code-generation",
             "behat --strict --profile ci"
         ],
-//        "post-install-cmd": [
-//            "\\SebastianFeldmann\\CaptainHook\\Composer\\Cmd::install",
-//            "php artisan passport:keys || php -r \"return 0;\""
-//        ],
         "post-install-cmd": [ "php artisan clear-compiled",
             "php artisan optimize", "chmod -R 777 storage", "php artisan passport:keys" ],
         "bootstrap:passport": [
